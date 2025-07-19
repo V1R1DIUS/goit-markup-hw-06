@@ -32,7 +32,7 @@ img{
 .container{
   width: 1158px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
 }
 
 /* Header */
@@ -44,13 +44,15 @@ img{
 
 .header-container{
   display: flex;
+
 }
 
 .header-navigation{
   display: flex;
   align-items: center;
-  margin-right: auto;
+  margin: 0;
 }
+
 
 .logo {
  margin-right: 76px;
@@ -67,6 +69,23 @@ img{
  color: #2e2f42;
 }
 
+
+.menu-close-btn{
+  display: none;
+}
+
+.burger-btn{
+  background: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobile-menu-content{
+  display: flex;
+  gap: 322px;
+}
 .menu{
   display: flex;
   gap: 40px;
@@ -127,6 +146,11 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .contacts-item:focus {
 color: #404bbf;
 }
+
+.menu-social-list{
+  display: none;
+}
+
 
 /* Section 1 Hero Banner */
 
@@ -541,8 +565,8 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   
 }
 
-
-.modal-overlay.is-open{
+.is-open{
+  display: flex;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -602,7 +626,9 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 
 }
 
-
+.modal-form{
+  display: block;
+}
 .modal-form-box {
 margin-bottom: 8px;
 }
@@ -709,8 +735,8 @@ margin-bottom: 8px;
 
 .modal-button{
   display: block;
-  margin-left: 90px;
-  min-width: 169px;
+  margin: 0 auto;
+  width: 169px;
   height: 56px;
   font-family: "Roboto" sans-serif;
   font-size: 16px;
@@ -722,4 +748,217 @@ margin-bottom: 8px;
   background-color: #4d5ae5;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+
+@media screen and (max-width:767px) {
+
+.container{
+  width: 320px;
+}
+
+.section{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding:96px 0px ;
+  position: relative;
+  width: 100%;
+}
+/* Header */
+.header-navigation{
+  width: 100%;
+}
+
+.mobile-menu{
+   display: flex;
+   padding: 16px;
+}
+
+.logo{
+   display: flex;
+   justify-content: center;
+   margin-right: 0;
+  
+  }
+ 
+ .mobile-overlay{
+    display: none;
+  }
+
+ .burger-btn {
+  display: block;
+  position: absolute;
+  right: 16px;
+  }
+  .menu-close-btn{
+    display: block;
+  }
+  .mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: #fff;
+    z-index: 999;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    transform: translateX(100%);
+    transition: transform 300ms ease;
+  }
+
+  .mobile-menu-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobile-overlay.is-open {
+    transform: translateX(0);
+  }
+  .menu .current::after {
+    display: none;
+    content: none;
+  }
+  .menu, .menu-item{
+    padding: 0;
+  }
+
+  .menu{
+    padding-bottom: 70px ;
+  }
+
+  .contacts{
+    padding-bottom: 40px;
+  }
+
+  .contacts-item{
+    font-size: 20px;
+  }
+  .menu, .contacts-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+
+  }
+  .menu-item{
+    font-size: 36px;
+  }
+  .menu-close-btn {
+    background: none;
+    border: none;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .menu-social-list{
+    display: flex;
+    gap: 40px;
+  }
+
+/* Main Content */
+
+.hero-banner-title{
+  margin: 0 auto 72px;
+  max-width: 216px;
+  font-size: 36px;
+}
+
+.benefits-list{
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 72px;
+}
+.benefits-icons{
+  display: none; 
+}
+.benefits-item{
+  width: 100%;
+}
+.benefits-title{
+  display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 36px;
+}
+.benefits-info{
+  font-size: 18px;
+}
+
+.team-list {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 72px;
+
+}
+.team-list-item {
+  width: 100%;
+}
+.team-position {
+  font-size: 18px;
+} 
+.img-team{
+  width: 100%;
+}
+
+.portfolio-list {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+.portfolio-item {
+  width: 100%;
+}
+
+/* Footer Content */
+.footer-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .footer-branding,
+  .socials-section,
+  .subscribe-section {
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .socials-text,
+  .subscribe-title{
+    text-align: center;
+  }
+
+  .footer-paragraph {
+    max-width: 100%;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .subscribe-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .subscribe-button {
+    width: 100%;
+    max-width: 165px;
+  }
+
+  .footer-list {
+    justify-content: center;
+  }
+
+  /* Modal Window */
+
+  .modal{
+    width: 100%;
+  }
+
 }

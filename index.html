@@ -18,26 +18,80 @@
     <header class="header">
         <div class="container header-container">
             <nav class="header-navigation">
-                <a class="logo" href="./index.html">
-                    Web<span class="studio">Studio</span>
-                </a>
-                <ul class="menu">
-                    <li><a href="./index.html" class="current menu-item">Studio</a></li>
-                    <li><a href="" class="menu-item">Portfolio</a></li>
-                    <li><a href="" class="menu-item">Contacts</a></li>
-                </ul>
+                <div class="mobile-menu">
+                    <a class="logo" href="./index.html">
+                        Web<span class="studio">Studio</span>
+                    </a>
+
+                    <button class="burger-btn" type="button">
+                        <svg width="24" height="24">
+                            <use href="./images/icons.svg#icon-mob-menu"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="mobile-overlay">
+
+                    <button type="button" class="menu-close-btn">
+                        <svg width="8" height="8">
+                            <use href="./images/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <div class="mobile-menu-content">
+                        <ul class="menu">
+                            <li><a href="./index.html" class="current menu-item">Studio</a></li>
+                            <li><a href="" class="menu-item">Portfolio</a></li>
+                            <li><a href="" class="menu-item">Contacts</a></li>
+                        </ul>
+
+                        <address class="contacts">
+                            <ul class="contacts-list">
+                                <li><a href="mailto:info@devstudio.com" class="contacts-item">info@devstudio.com</a>
+                                </li>
+                                <li><a href="tel:+110001111111" class="contacts-item">+11 (000) 111-11-11</a></li>
+                            </ul>
+                        </address>
+
+                        <ul class="menu-social-list">
+                            <li class="footer-icon">
+                                <a href="https://www.instagram.com/" class="footer-icons-link">
+                                    <svg class="footer-icon-item" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-icon">
+                                <a href="https://www.facebook.com/" class="footer-icons-link">
+                                    <svg class="footer-icon-item" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-icon">
+                                <a href="https://x.com/" class="footer-icons-link">
+                                    <svg class="footer-icon-item" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer-icon">
+                                <a href="https://www.linkedin.com/" class="footer-icons-link">
+                                    <svg class="footer-icon-item" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                    </div>
+
+
+                </div>
             </nav>
-            <address class="contacts">
-                <ul class="contacts-list">
-                    <li><a href="mailto:info@devstudio.com" class="contacts-item">info@devstudio.com</a></li>
-                    <li><a href="tel:+110001111111" class="contacts-item">+11 (000) 111-11-11</a></li>
-                </ul>
-            </address>
+
         </div>
     </header>
 
     <main>
-        <section class="hero-banner">
+        <section class="hero-banner section">
             <div class="container">
                 <h1 class="hero-banner-title">Effective Solutions for Your Business</h1>
                 <button type="button" class="hero-banner-button">Order Service</button>
@@ -45,7 +99,7 @@
 
         </section>
 
-        <section class="benefits">
+        <section class="benefits section">
             <div class="container">
                 <h2 class="visually-hidden">1</h2>
                 <ul class="benefits-list">
@@ -102,12 +156,14 @@
 
         </section>
 
-        <section class="team">
+        <section class="team section">
             <div class="container">
                 <h2 class="team-title">Our Team</h2>
                 <ul class="team-list">
                     <li class="team-list-item">
-                        <img src="./images/mark-guerrero.jpg" alt="mark-guerrero" width="264">
+                        <img src="./images/mark-guerrero.jpg" class="img-team"
+                            srcset="./images/mark-guerrero.jpg 1x, ./images/mark-guerrero.jpg 2x" alt="mark-guerrero"
+                            width="264">
                         <div class="team-list-conteiner">
                             <h3 class="team-name">Mark Guerrero</h3>
                             <p class="team-position">Product Designer</p>
@@ -145,7 +201,8 @@
 
                     </li>
                     <li class="team-list-item">
-                        <img src="./images/tom-ford.jpg" alt="tom-ford" width="264">
+                        <img src="./images/tom-ford.jpg" class="img-team"
+                            srcset="./images/tom-ford.jpg 1x, ./images/tom-ford.jpg 2x" alt="tom-ford" width="264">
                         <div class="team-list-conteiner">
                             <h3 class="team-name">Tom Ford</h3>
                             <p class="team-position">Frontend Developer</p>
@@ -183,7 +240,9 @@
 
                     </li>
                     <li class="team-list-item">
-                        <img src="./images/camila-garcia.jpg" alt="camila-garcia" width="264">
+                        <img src="./images/camila-garcia.jpg" class="img-team"
+                            srcset="./images/camila-garcia.jpg 1x, ./images/camila-garcia.jpg 2x" srcset="./images/ 1x"
+                            alt="camila-garcia" width="264">
                         <div class="team-list-conteiner">
                             <h3 class="team-name">Camila Garcia</h3>
                             <p class="team-position">Marketing</p>
@@ -221,7 +280,9 @@
 
                     </li>
                     <li class="team-list-item">
-                        <img src="./images/daniel-wilson.jpg" alt="daniel-wilson" width="264">
+                        <img src="./images/daniel-wilson.jpg" class="img-team"
+                            srcset="./images/daniel-wilson.jpg 1x, ./images/daniel-wilson.jpg 2x" alt="daniel-wilson"
+                            width="264">
                         <div class="team-list-conteiner">
                             <h3 class="team-name">Daniel Wilson</h3>
                             <p class="team-position">UI Designer</p>
@@ -262,7 +323,7 @@
             </div>
 
         </section>
-        <section class="portfolio">
+        <section class="portfolio section">
             <div class="container">
                 <h2 class="portfolio-title">Our Portfolio</h2>
                 <ul class="portfolio-list">
@@ -337,7 +398,7 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer ">
         <div class="container footer-section">
             <div class="footer-branding">
                 <a class="logo-footer logo" href="./index.html">
@@ -389,14 +450,14 @@
                     <button type="submit" class="subscribe-button">
                         Subscribe
                         <svg class="subscribe-icon" width="24" height="24">
-                            <use href="./images/symbol-defs.svg#icon-subscribe"></use>
+                            <use href="./images/icons.svg#icon-subscribe"></use>
                         </svg>
                     </button>
                 </form>
             </div>
         </div>
     </footer>
-    <div class="modal-overlay is-open">
+    <div class="modal-overlay">
         <div class="modal">
 
             <button type="button" class="modal-btn-close">
@@ -478,6 +539,18 @@
 
         closeModalBtn.addEventListener('click', () => {
             modalOverlay.classList.remove('is-open');
+        });
+
+        const openBtn = document.querySelector('.burger-btn');
+        const closeBtn = document.querySelector('.menu-close-btn');
+        const overlay = document.querySelector('.mobile-overlay');
+
+        openBtn.addEventListener('click', () => {
+            overlay.classList.add('is-open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.classList.remove('is-open');
         });
     </script>
 
