@@ -156,7 +156,7 @@ color: #404bbf;
 
 .hero-banner{
 background-color: #2e2f42;
-background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desk-min.jpg);
 padding: 188px 0;
 margin: auto;
 max-width: 1440px;
@@ -165,14 +165,7 @@ background-position: center;
 background-size: cover;
 }
 
-@media 
-(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi), 
-(min-resolution: 2dppx) {
-  .hero-banner {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office@2x.jpg);
-  }
-}
+
 
 .hero-banner-title {
   margin: 0 auto 48px;
@@ -1064,3 +1057,22 @@ width: 36%;
 }
 
 
+/* Hero banner Retina */
+/* Desktop 2x */
+@media screen and (min-resolution: 192dpi) {
+  .hero-banner {
+    background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-desk@2x-min.jpg);
+  }
+}
+/* Table 2x */
+@media screen and (min-width: 768px) and (max-width: 1157px) and (min-resolution: 192dpi){
+  .hero-banner {
+    background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-tab@2x-min.jpg);
+  }
+}
+/* Mobile 2x */
+@media screen and (max-width: 767px) and (min-resolution: 192dpi) {
+  .hero-banner {
+    background-image:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-mob@2x-min.jpg);
+  }
+}
